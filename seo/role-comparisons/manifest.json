@@ -1,0 +1,13 @@
+{
+  "site": "Legal Billing Assistant",
+  "status": "local_verified",
+  "launchArticle": "legal-billing-manager-vs-legal-billing-va",
+  "preference": "fractional_vs_va",
+  "topics": [
+    {
+      "slug": "legal-billing-manager-vs-legal-billing-va",
+      "title": "Legal billing manager vs legal billing VA",
+      "state": "local_verified"
+    }
+  ]
+}
