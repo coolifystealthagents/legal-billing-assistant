@@ -1,0 +1,183 @@
+{
+  "site": "LegalBillingAssistant",
+  "canonicalDomain": "https://legalbillingassistant.com",
+  "repository": "coolifystealthagents/legal-billing-assistant",
+  "branch": "main",
+  "baseSha": "9e2ae2ef36e9e32d93689240ec13d385fd517f8b",
+  "publicationDate": "2026-10-13",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "total": 17
+  },
+  "registryPaths": [
+    "lib/october13-blog.ts",
+    "lib/october13-research.ts"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sidebarPaths": [
+    "components/October13Article.tsx"
+  ],
+  "items": [
+    {
+      "section": "Blog",
+      "slug": "ledes-invoice-field-mapping",
+      "title": "Validate LEDES Invoice Field Mapping Before Submission",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/ledes-invoice-field-mapping.svg",
+      "route": "/blog/ledes-invoice-field-mapping"
+    },
+    {
+      "section": "Blog",
+      "slug": "utbms-code-exception-queue",
+      "title": "Build a UTBMS Code Exception Queue for Review",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/utbms-code-exception-queue.svg",
+      "route": "/blog/utbms-code-exception-queue"
+    },
+    {
+      "section": "Blog",
+      "slug": "timekeeper-rate-table-reconciliation",
+      "title": "Reconcile Timekeeper Rate Tables Across Billing Systems",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/timekeeper-rate-table-reconciliation.svg",
+      "route": "/blog/timekeeper-rate-table-reconciliation"
+    },
+    {
+      "section": "Blog",
+      "slug": "billing-guideline-waiver-register",
+      "title": "Maintain a Client Billing Guideline Waiver Register",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/billing-guideline-waiver-register.svg",
+      "route": "/blog/billing-guideline-waiver-register"
+    },
+    {
+      "section": "Blog",
+      "slug": "time-entry-narrative-edit-handoff",
+      "title": "Route Time Entry Narrative Edits Without Rewriting Legal Work",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/time-entry-narrative-edit-handoff.svg",
+      "route": "/blog/time-entry-narrative-edit-handoff"
+    },
+    {
+      "section": "Blog",
+      "slug": "matter-identifier-crosswalk-control",
+      "title": "Control Matter Identifier Crosswalks for Client Invoices",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/matter-identifier-crosswalk-control.svg",
+      "route": "/blog/matter-identifier-crosswalk-control"
+    },
+    {
+      "section": "Blog",
+      "slug": "invoice-tax-currency-field-review",
+      "title": "Prepare Invoice Tax and Currency Fields for Accountable Review",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/invoice-tax-currency-field-review.svg",
+      "route": "/blog/invoice-tax-currency-field-review"
+    },
+    {
+      "section": "Blog",
+      "slug": "duplicate-invoice-submission-response",
+      "title": "Respond to Suspected Duplicate Invoice Submissions",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/duplicate-invoice-submission-response.svg",
+      "route": "/blog/duplicate-invoice-submission-response"
+    },
+    {
+      "section": "Blog",
+      "slug": "billing-portal-status-evidence",
+      "title": "Capture Durable Evidence of Billing Portal Status",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/billing-portal-status-evidence.svg",
+      "route": "/blog/billing-portal-status-evidence"
+    },
+    {
+      "section": "Blog",
+      "slug": "rejected-line-item-correction-batches",
+      "title": "Segment Rejected Line Item Corrections Into Reviewable Batches",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/rejected-line-item-correction-batches.svg",
+      "route": "/blog/rejected-line-item-correction-batches"
+    },
+    {
+      "section": "Blog",
+      "slug": "aged-unbilled-time-exception-close",
+      "title": "Close Aged Unbilled Time Exceptions With Decision Evidence",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/aged-unbilled-time-exception-close.svg",
+      "route": "/blog/aged-unbilled-time-exception-close"
+    },
+    {
+      "section": "Blog",
+      "slug": "billing-queue-coverage-handoff",
+      "title": "Transfer a Legal Billing Queue During Staff Absence",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-13/billing-queue-coverage-handoff.svg",
+      "route": "/blog/billing-queue-coverage-handoff"
+    },
+    {
+      "section": "Research",
+      "slug": "legal-invoice-version-lineage-study",
+      "title": "Legal Invoice Version Lineage Completeness Study",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-research.ts",
+      "thumbnailPath": "public/thumbnails/october-13/legal-invoice-version-lineage-study.svg",
+      "route": "/research/legal-invoice-version-lineage-study"
+    },
+    {
+      "section": "Research",
+      "slug": "ebilling-rejection-resolution-latency",
+      "title": "E-Billing Rejection Resolution Latency Study",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-research.ts",
+      "thumbnailPath": "public/thumbnails/october-13/ebilling-rejection-resolution-latency.svg",
+      "route": "/research/ebilling-rejection-resolution-latency"
+    },
+    {
+      "section": "Research",
+      "slug": "timekeeper-rate-table-consistency-study",
+      "title": "Timekeeper Rate Table Consistency Across Systems",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-research.ts",
+      "thumbnailPath": "public/thumbnails/october-13/timekeeper-rate-table-consistency-study.svg",
+      "route": "/research/timekeeper-rate-table-consistency-study"
+    },
+    {
+      "section": "Research",
+      "slug": "billing-guideline-exception-traceability-audit",
+      "title": "Billing Guideline Exception Traceability Audit",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-research.ts",
+      "thumbnailPath": "public/thumbnails/october-13/billing-guideline-exception-traceability-audit.svg",
+      "route": "/research/billing-guideline-exception-traceability-audit"
+    },
+    {
+      "section": "Research",
+      "slug": "invoice-portal-status-concordance-study",
+      "title": "Invoice Status Concordance Between Portals and Internal Records",
+      "publicationDate": "2026-10-13",
+      "sourcePath": "lib/october13-research.ts",
+      "thumbnailPath": "public/thumbnails/october-13/invoice-portal-status-concordance-study.svg",
+      "route": "/research/invoice-portal-status-concordance-study"
+    }
+  ]
+}
