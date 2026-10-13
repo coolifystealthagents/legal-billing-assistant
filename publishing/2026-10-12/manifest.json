@@ -1,0 +1,179 @@
+{
+  "site": "LegalBillingAssistant",
+  "canonicalDomain": "https://legalbillingassistant.com",
+  "repository": "coolifystealthagents/legal-billing-assistant",
+  "branch": "main",
+  "date": "2026-10-12",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "total": 17
+  },
+  "articles": [
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Matter-Level Billing Guideline Intake Checklist",
+      "slug": "matter-billing-guideline-intake-checklist",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/matter-billing-guideline-intake-checklist.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Time Entry Exception Queue for Reviewers",
+      "slug": "time-entry-exception-queue-reviewers",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/time-entry-exception-queue-reviewers.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Prebill Version Control and Approval Handoff",
+      "slug": "prebill-version-control-approval-handoff",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/prebill-version-control-approval-handoff.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "E-Billing Rejection Triage Without Guesswork",
+      "slug": "ebilling-rejection-triage-without-guesswork",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/ebilling-rejection-triage-without-guesswork.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Outside Counsel Guideline Change Register",
+      "slug": "outside-counsel-guideline-change-register",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/outside-counsel-guideline-change-register.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Invoice Submission Evidence Pack",
+      "slug": "invoice-submission-evidence-pack",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/invoice-submission-evidence-pack.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Billing Rate Approval Record Workflow",
+      "slug": "billing-rate-approval-record-workflow",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/billing-rate-approval-record-workflow.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Legal Matter Setup Quality-Control Review",
+      "slug": "legal-matter-setup-quality-control-review",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/legal-matter-setup-quality-control-review.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Client Portal Credential Access Protocol",
+      "slug": "client-portal-credential-access-protocol",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/client-portal-credential-access-protocol.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Invoice Follow-Up Communication Ledger",
+      "slug": "invoice-follow-up-communication-ledger",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/invoice-follow-up-communication-ledger.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Billing Adjustment Decision Trail",
+      "slug": "billing-adjustment-decision-trail",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/billing-adjustment-decision-trail.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Blog",
+      "title": "Month-End Legal Billing Close Checklist",
+      "slug": "month-end-legal-billing-close-checklist",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/month-end-legal-billing-close-checklist.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Research",
+      "title": "Measuring Time Entry Correction Rework",
+      "slug": "time-entry-correction-rework-measurement",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/time-entry-correction-rework-measurement.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Research",
+      "title": "Prebill Review Cycle-Time Study",
+      "slug": "prebill-review-cycle-time-study",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/prebill-review-cycle-time-study.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Research",
+      "title": "E-Billing Rejection Cause Reliability Audit",
+      "slug": "ebilling-rejection-cause-reliability-audit",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/ebilling-rejection-cause-reliability-audit.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Research",
+      "title": "Outside Counsel Guideline Compliance Sampling",
+      "slug": "outside-counsel-guideline-compliance-sampling",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/outside-counsel-guideline-compliance-sampling.svg",
+      "publicationDate": "2026-10-12"
+    },
+    {
+      "site": "LegalBillingAssistant",
+      "section": "Research",
+      "title": "Invoice Submission-to-Payment Event Analysis",
+      "slug": "invoice-submission-payment-event-analysis",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/invoice-submission-payment-event-analysis.svg",
+      "publicationDate": "2026-10-12"
+    }
+  ],
+  "systems": {
+    "blog": {
+      "registry": "lib/october12-blog.ts",
+      "index": "app/blog/page.tsx",
+      "route": "app/blog/[slug]/page.tsx"
+    },
+    "research": {
+      "registry": "lib/october12-research.ts",
+      "index": "app/research/page.tsx",
+      "route": "app/research/[slug]/page.tsx"
+    }
+  }
+}
