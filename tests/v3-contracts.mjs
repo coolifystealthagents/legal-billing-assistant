@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -35,8 +36,20 @@ assert.ok(!allSource.includes('TimedLeadModal'), 'promotional timed modal must b
 
 const provenance = JSON.parse(read('app/review-provenance.json'));
 assert.equal(provenance.source, 'https://stealthagents.com/');
+assert.equal(provenance.sourceCapture.url, provenance.source);
+assert.match(provenance.sourceCapture.captureId, /^stealthagents-homepage-\d{8}T\d{6}Z-[a-f0-9]{12}$/);
+assert.match(provenance.sourceCapture.pageSha256, /^[a-f0-9]{64}$/);
 assert.ok(provenance.records.length >= 10, 'at least ten approved review records required');
 assert.equal(new Set(provenance.records.map((item) => `${item.name}|${item.body}`)).size, provenance.records.length, 'reviews must be unique');
+for (const record of provenance.records) {
+  const evidence = record.sourceEvidence;
+  assert.equal(evidence.quote, record.body, `${record.name} displayed quote must match captured evidence`);
+  assert.equal(evidence.name, record.name, `${record.name} displayed name must match captured evidence`);
+  assert.equal(evidence.rating, '★★★★★', `${record.name} must retain captured five-star evidence`);
+  assert.ok(evidence.detail && evidence.visibleOccurrenceCount > 0, `${record.name} must have traceable source detail and occurrence evidence`);
+  const canonical = [evidence.quote, evidence.name, evidence.detail, evidence.rating].join('\n');
+  assert.equal(evidence.evidenceSha256, crypto.createHash('sha256').update(canonical).digest('hex'), `${record.name} evidence checksum must be current`);
+}
 mustContain('components/ReviewRail.tsx', ['prefers-reduced-motion: reduce', 'requestAnimationFrame', 'appendChild(first)', 'onMouseEnter', 'onFocus', 'tabIndex={0}']);
 assert.ok(!read('components/ReviewRail.tsx').includes('review-copy'), 'review records must render once and recycle without cloned cards');
 
@@ -74,7 +87,8 @@ mustContain('components/ArticleSidebar.tsx', ['IntersectionObserver', 'aria-curr
 const bannedCommercial = /(?:className=["'`]\w*(?:number|step-marker|alpha)|>0[1-9]<|>[A-D]<)/;
 assert.ok(!bannedCommercial.test(allSource), 'decorative numeric or alphabet markers must not remain');
 
-for (const character of ['—', '–']) assert.ok(!allSource.includes(character), `visible punctuation must not include ${character}`);
+const punctuationSource = `${allSource}\n${read('app/globals.css')}`;
+for (const character of ['—', '–']) assert.ok(!punctuationSource.includes(character), `visible source, including CSS content, must not include ${character}`);
 assert.ok(!/(?:[A-Za-z]\s)--(?:\s|[A-Za-z])/.test(allSource), 'visible prose must not contain double-hyphen punctuation');
 
 mustContain('next.config.mjs', [
