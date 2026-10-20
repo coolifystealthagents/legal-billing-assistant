@@ -2,27 +2,32 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/lib/site';
 import { blogPosts } from '@/lib/content';
-import { ArrowIcon, CheckIcon, SparkIcon } from './Icons';
+import { DocketArtwork } from './DocketArtwork';
 
-const CTA = ({ id, children }: { id: string; children: React.ReactNode }) => <Link id={id} className="button primary" href="/contact-us">{children} <ArrowIcon /></Link>;
-
-function ServiceCards() { return <div className="service-grid">{site.services.map((service, index) => <Link className="service-card reveal" href={`/services/${service.slug}`} key={service.slug}><span className="service-number">0{index + 1}</span><h3>{service.name}</h3><p>{service.short}</p><span className="text-link">Explore the role <ArrowIcon /></span></Link>)}</div>; }
-function Principles() { return <div className="principles">{site.principles.map((item) => <div key={item}><CheckIcon /><span>{item}</span></div>)}</div>; }
-function Latest() { return <div className="article-grid">{blogPosts.slice(0, 3).map((post) => <Link href={`/blog/${post.slug}`} className="article-card" key={post.slug}><span className="pill">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><span className="text-link">Read the guide <ArrowIcon /></span></Link>)}</div>; }
+function ServiceDirectory() {
+  return <div className="service-directory">{site.services.map((service) => <Link href={`/services/${service.slug}`} key={service.slug}><div><p>{service.tasks.slice(0, 2).join(' · ')}</p><h3>{service.name}</h3></div><span>View scope</span></Link>)}</div>;
+}
 
 export function HomePage() {
-  const design = site.design;
-  return <main className={`home design-${design}`}>
-    <section className="hero">
-      <div className="hero-copy"><p className="eyebrow">{site.eyebrow}</p><h1>{site.hero} <em>{site.heroAccent}</em></h1><p className="hero-body">{site.heroBody}</p><div className="hero-actions"><CTA id="cta-home-hero-bookcall">Book a free consultation</CTA><Link className="quiet-link" href="/services">See specialist roles</Link></div><Principles /></div>
-      <div className="hero-visual"><Image src={site.heroImage} alt={site.heroAlt} fill priority sizes="(max-width: 900px) 100vw, 54vw" /><div className="hero-label"><SparkIcon /><span>{site.manifesto}</span></div></div>
+  return <main id="main-content" tabIndex={-1} className="home">
+    <section className="home-hero">
+      <div className="hero-copy"><p className="kicker">Legal billing operations support</p><h1>Move billing work forward without moving approval away.</h1><p className="hero-body">Specialist remote assistants prepare time records, prebills, e-billing evidence, matter data, and follow-up queues. Your firm keeps legal interpretation, financial approval, client commitments, and professional judgment.</p><div className="hero-actions"><Link className="button primary" href="/contact-us">Plan a legal billing role</Link><Link className="text-link" href="/services">Review service scopes</Link></div><dl className="hero-proof"><div><dt>Work lane</dt><dd>Documented preparation</dd></div><div><dt>Control</dt><dd>Named firm reviewer</dd></div><div><dt>Exception</dt><dd>Visible escalation</dd></div></dl></div>
+      <DocketArtwork title="The review-ready billing docket" detail="Source records become prepared evidence, then return to the firm owner for approval" variant="docket" />
     </section>
-    {design === 'signal' && <section className="signal-strip" aria-label="Inside sales workflow"><span>Prospecting support</span><span>CRM hygiene</span><span>Follow through</span><span>Pipeline visibility</span></section>}
-    {design === 'conversation' && <section className="conversation-band"><div className="bubble one">Clear replies</div><div className="bubble two">Useful context</div><div className="bubble three">Thoughtful escalation</div></section>}
-    <section className="section intro"><p className="eyebrow">Specialist support, shaped around your work</p><div><h2>Build capacity without lowering the bar.</h2><p>{site.manifesto} Your assistant works from documented priorities, clear decision rights, and a practical review rhythm.</p></div></section>
-    <section className="section services"><div className="section-heading"><p className="eyebrow">Roles that fit the work</p><h2>Choose the support your team can actually use.</h2></div><ServiceCards /></section>
-    <section className="section method"><div className="method-art"><span>01</span><span>02</span><span>03</span></div><div><p className="eyebrow">A useful working model</p><h2>Define. Delegate. Improve.</h2><p>Start with the recurring work that already has an owner, a standard, and a clear escalation path. Then create a small review loop that makes the handoff stronger over time.</p><ol><li><strong>Define the boundary.</strong> Separate preparation and coordination from licensed or executive judgment.</li><li><strong>Document the handoff.</strong> Set inputs, output format, review points, and exception rules.</li><li><strong>Improve with evidence.</strong> Review a focused sample and update the process when patterns emerge.</li></ol><CTA id="cta-home-method-consultation">Plan a free consultation</CTA></div></section>
-    <section className="section journal"><div className="section-heading"><p className="eyebrow">Field notes</p><h2>Practical guidance for better delegation.</h2></div><Latest /></section>
-    <section className="closing"><p className="eyebrow">Make room for the work only you can do</p><h2>Let us map your first specialist support role.</h2><p>A focused conversation can turn scattered tasks into a clear, reviewable role brief.</p><CTA id="cta-home-closing-schedulecall">Schedule a free call</CTA></section>
+
+    <section className="operating-thesis"><p>Billing support should make the next decision easier to inspect.</p><div><h2>Capacity with a visible boundary.</h2><p>A useful assistant does not make disputed, legal, or financial decisions. The assistant keeps approved preparation moving, records what was checked, and routes uncertainty to the person who owns it.</p></div></section>
+
+    <section className="section service-overview"><div className="section-heading"><p className="kicker">Focused service lanes</p><h2>Choose a queue that already has an accountable owner.</h2><p>Each service begins with source material, a completion definition, a review point, and a documented exception path.</p></div><ServiceDirectory /></section>
+
+    <section className="review-docket section-dark">
+      <div><p className="kicker">Signature operating model</p><h2>Build the handoff around evidence.</h2><p>The review docket gives managers a compact record of what entered the workflow, what the assistant prepared, what remains unresolved, and who must decide next.</p><Link className="button light" href="/services">Explore the full operating model</Link></div>
+      <dl className="docket-ledger"><div><dt>Input</dt><dd>Approved system records, client guidelines, and the current queue.</dd></div><div><dt>Preparation</dt><dd>Checks, indexing, packet assembly, status updates, and exception notes.</dd></div><div><dt>Evidence</dt><dd>Source reference, completion status, open question, and next action.</dd></div><div><dt>Owner gate</dt><dd>Authorized attorney, billing leader, finance owner, or firm manager.</dd></div></dl>
+    </section>
+
+    <section className="section boundary-layout"><div className="boundary-image"><Image src="/hero.png" alt="Legal billing ledger, source records, and balance scales arranged for review" fill sizes="(max-width: 900px) 100vw, 46vw" /></div><div><p className="kicker">Clear responsibility</p><h2>Preparation can be delegated. Authority cannot.</h2><p>Assistants can organize records, apply written checks, maintain approved fields, and prepare routine communications. Attorneys and authorized firm leaders retain narrative judgment, privilege decisions, rate changes, write downs, invoice approval, disputes, payment decisions, and every client commitment.</p><ul className="check-list"><li>Least privilege system access</li><li>Approved written procedures</li><li>Named review and escalation owners</li><li>Sampled quality checks and retained evidence</li></ul></div></section>
+
+    <section className="section journal"><div className="section-heading"><p className="kicker">Legal billing field notes</p><h2>Guidance for better handoffs.</h2><Link className="text-link" href="/blog">View all practical guides</Link></div><div className="editorial-row">{blogPosts.slice(0, 3).map((post) => <Link href={`/blog/${post.slug}`} key={post.slug}><p>{post.category} · {post.readTime}</p><h3>{post.title}</h3><span>Read the guide</span></Link>)}</div></section>
+
+    <section className="closing"><p className="kicker">Start with one controlled workflow</p><h2>Bring the billing queue that consumes the most review time.</h2><p>We will help define the support lane, evidence standard, owner gate, and candidate profile.</p><Link className="button light" href="/contact-us">Book a free consultation</Link></section>
   </main>;
 }

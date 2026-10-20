@@ -1,22 +1,73 @@
 'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { site } from '@/lib/site';
-import { nav } from '@/lib/content';
-import { LeadForm } from './LeadForm';
-import { ArrowIcon } from './Icons';
+
+const primaryNav = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Contact Us', href: '/contact-us' },
+];
 
 export function Header() {
-  return <header className="site-header"><Link className="brand" href="/"><Image src="/logo.svg" alt="" width={42} height={42} /><span>{site.name}</span></Link><nav aria-label="Primary navigation">{nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</nav><Link id="cta-global-header-bookcall" className="button compact" href="/contact-us">Book a free call <ArrowIcon /></Link></header>;
-}
-export function Footer() {
-  return <footer><div><Link className="brand inverse" href="/"><Image src="/logo.svg" alt="" width={44} height={44} /><span>{site.name}</span></Link><p>Specialist remote staff for {site.audience}.</p></div><div className="footer-links">{nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}<Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></div><p className="copyright">© {new Date().getFullYear()} {site.name}</p></footer>;
-}
-export function TimedLeadModal() {
   const [open, setOpen] = useState(false);
-  useEffect(() => { if (sessionStorage.getItem('lead-modal-seen')) return; const timer = window.setTimeout(() => { sessionStorage.setItem('lead-modal-seen', 'true'); setOpen(true); }, 8000); return () => clearTimeout(timer); }, []);
-  useEffect(() => { const key = (event: KeyboardEvent) => event.key === 'Escape' && setOpen(false); window.addEventListener('keydown', key); return () => window.removeEventListener('keydown', key); }, []);
-  if (!open) return null;
-  return <div className="modal-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && setOpen(false)}><section className="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button className="modal-close" onClick={() => setOpen(false)} aria-label="Close form">×</button><p className="eyebrow">A calmer next step</p><h2 id="modal-title">Tell us what is taking too much of your day.</h2><p>We will help you map the right support role in a free consultation.</p><LeadForm source="timed-modal" /></section></div>;
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.activeElement as HTMLElement | null;
+    const focusable = () => Array.from(panelRef.current?.querySelectorAll<HTMLElement>('a,button') || []);
+    focusable()[0]?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+      if (event.key === 'Tab') {
+        const items = focusable();
+        if (!items.length) return;
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    };
+    document.body.classList.add('menu-open');
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.classList.remove('menu-open');
+      document.removeEventListener('keydown', onKey);
+      if (previous && previous !== document.body) previous.focus();
+    };
+  }, [open]);
+
+  return <header className="site-header">
+    <Link className="brand" href="/" aria-label={`${site.name} home`} onClick={() => setOpen(false)}>
+      <Image src="/logo.svg" alt="" width={38} height={38} priority />
+      <span>{site.name}</span>
+    </Link>
+    <p className="parent-attribution"><strong>Powered by StealthAgents</strong></p>
+    <button ref={buttonRef} className="menu-toggle" type="button" aria-expanded={open} aria-controls="primary-menu" onClick={() => setOpen((value) => !value)}>
+      <span>{open ? 'Close' : 'Menu'}</span><span aria-hidden="true" className="menu-lines" />
+    </button>
+    <nav ref={panelRef} id="primary-menu" className={open ? 'primary-nav open' : 'primary-nav'} aria-label="Primary navigation">
+      {primaryNav.map((item) => <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>)}
+    </nav>
+  </header>;
+}
+
+export function Footer() {
+  return <footer className="site-footer">
+    <div className="footer-brand">
+      <Link className="brand inverse" href="/"><Image src="/logo.svg" alt="" width={44} height={44} /><span>{site.name}</span></Link>
+      <p>Review-ready legal billing support for law firms that keep judgment and approval with accountable owners.</p>
+    </div>
+    <nav className="footer-primary" aria-label="Footer primary navigation">{primaryNav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</nav>
+    <nav className="footer-secondary" aria-label="Resources and legal"><Link href="/about">About</Link><Link href="/blog">Blog</Link><Link href="/research">Research</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
+    <div className="footer-parent"><Image src="/brand/stealth-agents-logo-black.png" alt="StealthAgents" width={150} height={36} /><p><strong>Powered by StealthAgents</strong></p></div>
+    <p className="copyright">© {new Date().getFullYear()} {site.name}. Administrative support does not replace legal, billing, finance, or client authority.</p>
+  </footer>;
 }

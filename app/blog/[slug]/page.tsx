@@ -1,12 +1,23 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { blogPosts,blogBySlug } from '@/lib/content';
-import { site } from '@/lib/site';
+import { blogPosts, blogBySlug } from '@/lib/content';
 import { october12Blog } from '@/lib/october12-blog';
 import { October12BlogArticle } from '@/components/October12Article';
 import { october13Blog } from '@/lib/october13-blog';
 import { October13BlogArticle } from '@/components/October13Article';
-export function generateStaticParams(){return [...october13Blog,...october12Blog,...blogPosts].map(({slug})=>({slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const latest=october13Blog.find(post=>post.slug===slug);if(latest)return{title:latest.title,description:latest.description,alternates:{canonical:`/blog/${latest.slug}`}};const fresh=october12Blog.find(post=>post.slug===slug);if(fresh)return{title:fresh.title,description:`${fresh.focus} organized as a reviewable legal billing workflow.`,alternates:{canonical:`/blog/${fresh.slug}`}};const post=blogBySlug(slug);return post?{title:post.title,description:post.description,alternates:{canonical:`/blog/${post.slug}`}}:{} }
-export default async function BlogPostPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const latest=october13Blog.find(post=>post.slug===slug);if(latest)return <October13BlogArticle post={latest}/>;const fresh=october12Blog.find(post=>post.slug===slug);if(fresh)return <October12BlogArticle post={fresh}/>;const post=blogBySlug(slug);if(!post)notFound();const related=blogPosts.filter((p)=>p.slug!==post.slug).slice(0,3);return <main><header className="page-hero"><p className="eyebrow">Home / Blog / {post.category}</p><h1>{post.title}</h1><p>{post.description}</p><p className="meta">{site.name} Editorial Team · {post.publishedAt} · {post.readTime}</p></header><section className="content-wrap article-layout"><article className="prose"><nav className="toc" aria-label="On this page"><strong>On this page</strong>{post.sections.map((section)=><a key={section.heading} href={`#${section.heading.toLowerCase().replace(/[^a-z0-9]+/g,'-')}`}>{section.heading}</a>)}</nav>{post.sections.map((section,index)=><section key={section.heading} id={section.heading.toLowerCase().replace(/[^a-z0-9]+/g,'-')}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph)=><p key={paragraph}>{paragraph}</p>)}{index===2&&<p>Use the <Link href={post.internalService}>specialist service role</Link> as a starting point for defining scope and evidence.</p>}{index===4&&<p><a href={post.source.url} rel="noopener noreferrer">{post.source.label}</a> provides public guidance that can help your team test the workflow assumptions.</p>}{index===6&&<p>Compare this approach with our guide to <Link href={post.internalSibling}>the next related workflow</Link>.</p>}</section>)}<h2>Common questions answered</h2>{post.faq.map((item)=><div key={item.q}><h3>{item.q}</h3><p>{item.a}</p></div>)}<h2>Ready to create a clearer support role?</h2><p>Bring the workflow that consumes the most attention. We will help you shape the role, handoff, and review points.</p><Link id="cta-blog-final-bookcall" className="button primary" href="/contact-us">Book a free consultation</Link></article><aside className="sidebar"><p className="eyebrow">A practical next step</p><h3>Turn one recurring workflow into a clear role brief.</h3><p>Start with a free working conversation.</p><Link id="cta-blog-sidebar-schedulecall" className="button" href="/contact-us">Schedule a free call</Link></aside></section><section className="section"><div className="section-heading"><p className="eyebrow">Related articles</p><h2>Keep building the system.</h2></div><div className="article-grid">{related.map((item)=><Link className="article-card" href={`/blog/${item.slug}`} key={item.slug}><h3>{item.title}</h3><p>{item.description}</p></Link>)}</div></section></main>}
+import { ArticleShell } from '@/components/ArticleShell';
+
+export function generateStaticParams() { return [...october13Blog, ...october12Blog, ...blogPosts].map(({ slug }) => ({ slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params; const latest = october13Blog.find((post) => post.slug === slug); if (latest) return { title: latest.title, description: latest.description, alternates: { canonical: `/blog/${latest.slug}` } };
+  const fresh = october12Blog.find((post) => post.slug === slug); if (fresh) return { title: fresh.title, description: `${fresh.focus} organized as a reviewable legal billing workflow.`, alternates: { canonical: `/blog/${fresh.slug}` } };
+  const post = blogBySlug(slug); return post ? { title: post.title, description: post.description, alternates: { canonical: `/blog/${post.slug}` } } : {};
+}
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params; const latest = october13Blog.find((post) => post.slug === slug); if (latest) return <October13BlogArticle post={latest} />;
+  const fresh = october12Blog.find((post) => post.slug === slug); if (fresh) return <October12BlogArticle post={fresh} />;
+  const post = blogBySlug(slug); if (!post) notFound();
+  const sections = [...post.sections, { heading: 'Common questions answered', paragraphs: post.faq.map((item) => `${item.q} ${item.a}`) }];
+  const related = blogPosts.filter((item) => item.slug !== post.slug).slice(0, 3).map((item) => ({ title: item.title, href: `/blog/${item.slug}`, summary: item.description }));
+  return <ArticleShell kind="Blog" title={post.title} summary={post.description} category={post.category} date={post.publishedAt} readTime={post.readTime} sections={sections} sources={[post.source]} related={related} />;
+}

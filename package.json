@@ -7,7 +7,9 @@
     "build": "next build --webpack",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "audit": "npm run typecheck && npm run build && python3 scripts/ban_dashes.py .next/server/app"
+    "test": "node tests/v3-contracts.mjs",
+    "test:contracts": "node tests/v3-contracts.mjs",
+    "audit": "npm run test && npm run typecheck && npm run build && python3 scripts/ban_dashes.py .next/server/app"
   },
   "dependencies": {
     "next": "16.3.8",
