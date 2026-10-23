@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import TocSync from './TocSync';
 import { ArticleSidebar, type TocItem } from './ArticleSidebar';
 import { DocketArtwork } from './DocketArtwork';
 import { site } from '@/lib/site';
@@ -17,11 +18,12 @@ export function ArticleShell({ kind, title, summary, category, date, readTime, t
   const items: TocItem[] = sections.map((section) => ({ id: id(section.heading), label: section.heading }));
   if (sources.length) items.push({ id: 'authoritative-sources', label: 'Authoritative sources' });
   items.push({ id: 'next-step', label: 'Put the guidance to work' });
-  const meta = [category, `Published ${date}`, readTime || `${kind} brief`, `Publisher: ${site.name}`];
+  const formattedDate = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+  const meta = [category, `Published ${formattedDate}`, readTime || `${kind} brief`, `Publisher: ${site.name}`];
 
-  return <main id="main-content" tabIndex={-1} className="article-page">
+  return <main id="main-content" tabIndex={-1} className="article-page"><TocSync />
     <header className="article-hero">
-      <div className="article-heading"><p className="kicker"><Link href="/">Home</Link> / <Link href={`/${kind.toLowerCase()}`}>{kind}</Link> / {category}</p><h1>{title}</h1><p className="dek">{summary}</p><p className="meta">{site.name} Editorial Team · <time dateTime={date}>{date}</time>{readTime ? ` · ${readTime}` : ''}</p></div>
+      <div className="article-heading"><p className="kicker"><Link href="/">Home</Link> / <Link href={`/${kind.toLowerCase()}`}>{kind}</Link> / {category}</p><h1>{title}</h1><p className="dek">{summary}</p><p className="meta">{site.name} Editorial Team · <time dateTime={date}>{formattedDate}</time>{readTime ? ` · ${readTime}` : ''}</p></div>
       {thumbnail ? <figure className="article-hero-image"><Image src={thumbnail} alt={`Editorial illustration for ${title}`} fill priority sizes="(max-width: 900px) 100vw, 46vw" /></figure> : <DocketArtwork title={title} detail={`${category} evidence, control, and accountable decision path`} variant="editorial" className="article-generated-art" />}
     </header>
     <section className="article-frame">

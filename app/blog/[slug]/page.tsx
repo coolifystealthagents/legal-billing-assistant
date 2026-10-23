@@ -19,5 +19,5 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = blogBySlug(slug); if (!post) notFound();
   const sections = [...post.sections, { heading: 'Common questions answered', paragraphs: post.faq.map((item) => `${item.q} ${item.a}`) }];
   const related = blogPosts.filter((item) => item.slug !== post.slug).slice(0, 3).map((item) => ({ title: item.title, href: `/blog/${item.slug}`, summary: item.description }));
-  return <ArticleShell kind="Blog" title={post.title} summary={post.description} category={post.category} date={post.publishedAt} readTime={post.readTime} sections={sections} sources={[post.source]} related={related} />;
+  return <ArticleShell kind="Blog" title={post.title} summary={post.description} category={post.category} date={post.publishedAt} readTime={post.readTime} sections={sections} sources={[post.source]} related={related} thumbnail={post.thumbnail} />;
 }

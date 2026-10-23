@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Trust Account Reconciliation Support Boundaries</title><desc id="desc">LEGAL BILLING ASSISTANT / BLOG artwork with the exact article title.</desc>
+<defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#fca311" stroke-width="2" opacity=".18"/></pattern></defs>
+<rect width="1200" height="630" fill="#14213d"/>
+<rect width="1200" height="630" fill="url(#grid)"/>
+<circle cx="1030" cy="150" r="110" fill="#fca311" opacity=".18"/>
+<circle cx="1080" cy="440" r="160" fill="#fca311" opacity=".1"/>
+<rect x="62" y="48" width="446" height="54" rx="6" fill="#fca311"/>
+<text x="84" y="83" class="brand">LEGAL BILLING ASSISTANT / BLOG</text>
+<text x="72" y="240" class="title">Trust Account Reconciliation</text><text x="72" y="302" class="title">Support Boundaries</text>
+<line x1="72" y1="526" x2="1120" y2="526" stroke="#fca311" stroke-width="5"/>
+<text x="72" y="573" class="footer">EVIDENCE · OWNERSHIP · REVIEW</text>
+<style>.brand{fill:#f8f4ec;font:700 21px 'Trebuchet MS',Arial,sans-serif;letter-spacing:1.4px}.title{fill:#f8f4ec;font:700 46px Rockwell,Georgia,serif}.footer{fill:#fca311;font:700 20px 'Trebuchet MS',Arial,sans-serif;letter-spacing:1.2px}</style>
+</svg>
