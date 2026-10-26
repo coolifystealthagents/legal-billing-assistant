@@ -1,8 +1,10 @@
 import { site } from './site';
 import type { BlogPost, ResearchPost } from './types';
 import { october22BlogBatch, october22ResearchBatch } from './october22Batch';
+import { october25BlogBatch, october25ResearchBatch } from './october25Batch';
 
 export const blogPosts: BlogPost[] = [
+  ...october25BlogBatch,
   ...october22BlogBatch,
   {
     "slug": "legal-billing-manager-vs-legal-billing-va",
@@ -471,6 +473,7 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 export const researchPosts: ResearchPost[] = [
+  ...october25ResearchBatch,
   ...october22ResearchBatch,
   {
     "slug": "time-entry-review-support-workflow-boundary-review-1",
