@@ -9,9 +9,9 @@ import { DocketArtwork } from '@/components/DocketArtwork';
 export const metadata: Metadata = { title: 'Legal billing research', description: 'Source-led legal billing study designs with visible definitions, evidence, limitations, and decision boundaries.', alternates: { canonical: '/research' } };
 
 const posts = [
+  ...researchPosts.map((post) => ({ ...post, description: post.summary, thumbnail: '' })),
   ...october13Research.map((post) => ({ ...post, description: post.summary })),
   ...october12Research.map((post) => ({ ...post, description: post.question })),
-  ...researchPosts.map((post) => ({ ...post, description: post.summary, thumbnail: '' })),
 ];
 
 export default function ResearchPage() {
