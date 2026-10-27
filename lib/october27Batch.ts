@@ -1345,7 +1345,6 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     "publishedAt": "2026-10-27",
     "finding": "At the Research question and scope stage for Legal Billing Assistant, the billing coordinator reconciles attributing rework in the write-off request with the time entry and matter ledger and names the billing partner who accepts it.",
     "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-attributing-rework-in-the-write-off-request-2026-10-27.webp",
-    "methodology": "A repeatable measurement protocol for the write-off request in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
         "heading": "Research question and scope",
@@ -1508,7 +1507,6 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     "publishedAt": "2026-10-27",
     "finding": "On the Legal Billing Assistant desk, the billing coordinator treats the capacity planning for the collection letter case as a time entry and matter ledger control owned by the billing partner.",
     "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-capacity-planning-for-the-collection-letter-2026-10-27.webp",
-    "methodology": "A repeatable measurement protocol for the collection letter in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
         "heading": "Research question and scope",
@@ -1670,7 +1668,6 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     "publishedAt": "2026-10-27",
     "finding": "For Legal Billing Assistant's time entry and matter ledger, the billing coordinator checks the early-warning signals in the e-billing rejection source and records the next dated action for the billing partner.",
     "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-early-warning-signals-in-the-e-billing-rejection-2026-10-27.webp",
-    "methodology": "A repeatable measurement protocol for the e-billing rejection in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
         "heading": "Research question and scope",
@@ -1832,7 +1829,6 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     "publishedAt": "2026-10-27",
     "finding": "In Legal Billing Assistant's legal billing queue, the billing coordinator uses the time entry and matter ledger to test measuring response time for the trust ledger and leaves the exception with the billing partner.",
     "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-measuring-response-time-for-the-trust-ledger-2026-10-27.webp",
-    "methodology": "A repeatable measurement protocol for the trust ledger in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
         "heading": "Research question and scope",
@@ -1994,7 +1990,6 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     "publishedAt": "2026-10-27",
     "finding": "In Legal Billing Assistant's legal billing queue, the billing coordinator uses the time entry and matter ledger to test testing completeness in the billing narrative and leaves the exception with the billing partner.",
     "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-testing-completeness-in-the-billing-narrative-2026-10-27.webp",
-    "methodology": "A repeatable measurement protocol for the billing narrative in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
         "heading": "Research question and scope",
