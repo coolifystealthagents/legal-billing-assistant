@@ -2,13 +2,13 @@ import type { BlogPost, ResearchPost } from './types';
 
 export const october27BlogBatch: readonly BlogPost[] = [
   {
-    "slug": "legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "slug": "legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "title": "Build an intake record for the time entry that survives review",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the time entry and bounded by honest evidence.",
     "category": "Intake and Records",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the time entry needs its own control",
@@ -107,20 +107,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "LEDES Oversight Committee",
       "url": "https://ledes.org/"
     }
   },
   {
-    "slug": "legalbillingassistant-map-the-source-of-truth-for-the-matter-budget",
+    "slug": "legalbillingassistant-map-the-source-of-truth-for-the-matter-budget-2026-10-27",
     "title": "Map the source of truth for the matter budget",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the matter budget and bounded by honest evidence.",
     "category": "Intake and Records",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-map-the-source-of-truth-for-the-matter-budget.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-map-the-source-of-truth-for-the-matter-budget-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the matter budget needs its own control",
@@ -219,20 +219,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "LEDES Oversight Committee",
       "url": "https://ledes.org/"
     }
   },
   {
-    "slug": "legalbillingassistant-onboard-a-va-into-the-matter-budget-workflow-in-the-first-week",
+    "slug": "legalbillingassistant-onboard-a-va-into-the-matter-budget-workflow-in-the-first-week-2026-10-27",
     "title": "Onboard a VA into the matter budget workflow in the first week",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the matter budget and bounded by honest evidence.",
     "category": "Handoff and Ownership",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-onboard-a-va-into-the-matter-budget-workflow-in-the-first-week.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-onboard-a-va-into-the-matter-budget-workflow-in-the-first-week-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the matter budget needs its own control",
@@ -330,20 +330,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "U.S. Government Accountability Office",
       "url": "https://www.gao.gov/"
     }
   },
   {
-    "slug": "legalbillingassistant-report-the-trust-ledger-without-vanity-metrics",
+    "slug": "legalbillingassistant-report-the-trust-ledger-without-vanity-metrics-2026-10-27",
     "title": "Report the trust ledger without vanity metrics",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the trust ledger and bounded by honest evidence.",
     "category": "Reporting and Review",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-report-the-trust-ledger-without-vanity-metrics.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-report-the-trust-ledger-without-vanity-metrics-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the trust ledger needs its own control",
@@ -441,20 +441,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "U.S. Courts",
       "url": "https://www.uscourts.gov/"
     }
   },
   {
-    "slug": "legalbillingassistant-review-access-before-changing-the-collection-letter",
+    "slug": "legalbillingassistant-review-access-before-changing-the-collection-letter-2026-10-27",
     "title": "Review access before changing the collection letter",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the collection letter and bounded by honest evidence.",
     "category": "Access and Controls",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-review-access-before-changing-the-collection-letter.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-review-access-before-changing-the-collection-letter-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the collection letter needs its own control",
@@ -552,20 +552,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "Internal Revenue Service",
       "url": "https://www.irs.gov/"
     }
   },
   {
-    "slug": "legalbillingassistant-run-a-weekly-review-for-the-time-entry",
+    "slug": "legalbillingassistant-run-a-weekly-review-for-the-time-entry-2026-10-27",
     "title": "Run a weekly review for the time entry",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the time entry and bounded by honest evidence.",
     "category": "Reporting and Review",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-run-a-weekly-review-for-the-time-entry.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-run-a-weekly-review-for-the-time-entry-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the time entry needs its own control",
@@ -663,20 +663,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "NALS, The Association for Legal Professionals",
       "url": "https://www.nals.org/"
     }
   },
   {
-    "slug": "legalbillingassistant-run-an-exception-queue-for-the-trust-ledger",
+    "slug": "legalbillingassistant-run-an-exception-queue-for-the-trust-ledger-2026-10-27",
     "title": "Run an exception queue for the trust ledger",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the trust ledger and bounded by honest evidence.",
     "category": "Exceptions and Quality",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-run-an-exception-queue-for-the-trust-ledger.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-run-an-exception-queue-for-the-trust-ledger-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the trust ledger needs its own control",
@@ -774,20 +774,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "American Bar Association",
       "url": "https://www.americanbar.org/"
     }
   },
   {
-    "slug": "legalbillingassistant-sample-quality-for-the-write-off-request-without-guessing",
+    "slug": "legalbillingassistant-sample-quality-for-the-write-off-request-without-guessing-2026-10-27",
     "title": "Sample quality for the write-off request without guessing",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the write-off request and bounded by honest evidence.",
     "category": "Exceptions and Quality",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-sample-quality-for-the-write-off-request-without-guessing.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-sample-quality-for-the-write-off-request-without-guessing-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the write-off request needs its own control",
@@ -885,20 +885,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "American Bar Association",
       "url": "https://www.americanbar.org/"
     }
   },
   {
-    "slug": "legalbillingassistant-set-approval-boundaries-around-the-billing-narrative",
+    "slug": "legalbillingassistant-set-approval-boundaries-around-the-billing-narrative-2026-10-27",
     "title": "Set approval boundaries around the billing narrative",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the billing narrative and bounded by honest evidence.",
     "category": "Handoff and Ownership",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-set-approval-boundaries-around-the-billing-narrative.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-set-approval-boundaries-around-the-billing-narrative-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the billing narrative needs its own control",
@@ -996,20 +996,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "NALS, The Association for Legal Professionals",
       "url": "https://www.nals.org/"
     }
   },
   {
-    "slug": "legalbillingassistant-standardize-updates-to-the-e-billing-rejection-across-the-team",
+    "slug": "legalbillingassistant-standardize-updates-to-the-e-billing-rejection-across-the-team-2026-10-27",
     "title": "Standardize updates to the e-billing rejection across the team",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the e-billing rejection and bounded by honest evidence.",
     "category": "Intake and Records",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-standardize-updates-to-the-e-billing-rejection-across-the-team.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-standardize-updates-to-the-e-billing-rejection-across-the-team-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the e-billing rejection needs its own control",
@@ -1107,20 +1107,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "U.S. Courts",
       "url": "https://www.uscourts.gov/"
     }
   },
   {
-    "slug": "legalbillingassistant-write-a-handoff-protocol-for-the-outside-counsel-invoice",
+    "slug": "legalbillingassistant-write-a-handoff-protocol-for-the-outside-counsel-invoice-2026-10-27",
     "title": "Write a handoff protocol for the outside counsel invoice",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the outside counsel invoice and bounded by honest evidence.",
     "category": "Handoff and Ownership",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-write-a-handoff-protocol-for-the-outside-counsel-invoice.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-write-a-handoff-protocol-for-the-outside-counsel-invoice-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the outside counsel invoice needs its own control",
@@ -1217,20 +1217,20 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "U.S. Courts",
       "url": "https://www.uscourts.gov/"
     }
   },
   {
-    "slug": "legalbillingassistant-write-an-sop-for-the-outside-counsel-invoice-that-people-use",
+    "slug": "legalbillingassistant-write-an-sop-for-the-outside-counsel-invoice-that-people-use-2026-10-27",
     "title": "Write an SOP for the outside counsel invoice that people use",
     "description": "A source-bounded legal billing support guide for law firm billing teams, focused on the outside counsel invoice and bounded by honest evidence.",
     "category": "Intake and Records",
     "publishedAt": "2026-10-27",
     "readTime": "5 min read",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-write-an-sop-for-the-outside-counsel-invoice-that-people-use.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-write-an-sop-for-the-outside-counsel-invoice-that-people-use-2026-10-27.webp",
     "sections": [
       {
         "heading": "Why the outside counsel invoice needs its own control",
@@ -1328,7 +1328,7 @@ export const october27BlogBatch: readonly BlogPost[] = [
       }
     ],
     "internalService": "/services",
-    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review",
+    "internalSibling": "/blog/legalbillingassistant-build-an-intake-record-for-the-time-entry-that-survives-review-2026-10-27",
     "source": {
       "label": "American Bar Association",
       "url": "https://www.americanbar.org/"
@@ -1338,13 +1338,13 @@ export const october27BlogBatch: readonly BlogPost[] = [
 
 export const october27ResearchBatch: readonly ResearchPost[] = [
   {
-    "slug": "legalbillingassistant-attributing-rework-in-the-write-off-request",
+    "slug": "legalbillingassistant-attributing-rework-in-the-write-off-request-2026-10-27",
     "title": "Attributing rework in the write-off request",
     "summary": "A repeatable measurement protocol for the write-off request in legal billing support, with definitions, sampling, limits, and reporting.",
     "cluster": "Quality Analysis",
     "publishedAt": "2026-10-27",
     "finding": "This protocol asks how the write-off request can be described from the operational record in legal billing support.",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-attributing-rework-in-the-write-off-request.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-attributing-rework-in-the-write-off-request-2026-10-27.webp",
     "methodology": "A repeatable measurement protocol for the write-off request in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
@@ -1501,13 +1501,13 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     ]
   },
   {
-    "slug": "legalbillingassistant-capacity-planning-for-the-collection-letter",
+    "slug": "legalbillingassistant-capacity-planning-for-the-collection-letter-2026-10-27",
     "title": "Capacity planning for the collection letter",
     "summary": "A repeatable measurement protocol for the collection letter in legal billing support, with definitions, sampling, limits, and reporting.",
     "cluster": "Capacity and Coverage",
     "publishedAt": "2026-10-27",
     "finding": "This protocol asks how the collection letter can be described from the operational record in legal billing support.",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-capacity-planning-for-the-collection-letter.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-capacity-planning-for-the-collection-letter-2026-10-27.webp",
     "methodology": "A repeatable measurement protocol for the collection letter in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
@@ -1663,13 +1663,13 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     ]
   },
   {
-    "slug": "legalbillingassistant-early-warning-signals-in-the-e-billing-rejection",
+    "slug": "legalbillingassistant-early-warning-signals-in-the-e-billing-rejection-2026-10-27",
     "title": "Early-warning signals in the e-billing rejection",
     "summary": "A repeatable measurement protocol for the e-billing rejection in legal billing support, with definitions, sampling, limits, and reporting.",
     "cluster": "Risk Review",
     "publishedAt": "2026-10-27",
     "finding": "This protocol asks how the e-billing rejection can be described from the operational record in legal billing support.",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-early-warning-signals-in-the-e-billing-rejection.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-early-warning-signals-in-the-e-billing-rejection-2026-10-27.webp",
     "methodology": "A repeatable measurement protocol for the e-billing rejection in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
@@ -1825,13 +1825,13 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     ]
   },
   {
-    "slug": "legalbillingassistant-measuring-response-time-for-the-trust-ledger",
+    "slug": "legalbillingassistant-measuring-response-time-for-the-trust-ledger-2026-10-27",
     "title": "Measuring response time for the trust ledger",
     "summary": "A repeatable measurement protocol for the trust ledger in legal billing support, with definitions, sampling, limits, and reporting.",
     "cluster": "Measurement",
     "publishedAt": "2026-10-27",
     "finding": "This protocol asks how the trust ledger can be described from the operational record in legal billing support.",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-measuring-response-time-for-the-trust-ledger.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-measuring-response-time-for-the-trust-ledger-2026-10-27.webp",
     "methodology": "A repeatable measurement protocol for the trust ledger in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
@@ -1987,13 +1987,13 @@ export const october27ResearchBatch: readonly ResearchPost[] = [
     ]
   },
   {
-    "slug": "legalbillingassistant-testing-completeness-in-the-billing-narrative",
+    "slug": "legalbillingassistant-testing-completeness-in-the-billing-narrative-2026-10-27",
     "title": "Testing completeness in the billing narrative",
     "summary": "A repeatable measurement protocol for the billing narrative in legal billing support, with definitions, sampling, limits, and reporting.",
     "cluster": "Measurement",
     "publishedAt": "2026-10-27",
     "finding": "This protocol asks how the billing narrative can be described from the operational record in legal billing support.",
-    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-testing-completeness-in-the-billing-narrative.webp",
+    "thumbnail": "/article-thumbnails/october-27/legalbillingassistant-testing-completeness-in-the-billing-narrative-2026-10-27.webp",
     "methodology": "A repeatable measurement protocol for the billing narrative in legal billing support, with definitions, sampling, limits, and reporting.",
     "sections": [
       {
