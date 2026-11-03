@@ -23,9 +23,9 @@ export function ArticleSidebar({ items, meta, relatedHref, relatedLabel }: { ite
   </nav>;
 
   return <>
-    <details className="article-toc-mobile"><summary>Explore this article</summary>{toc}</details>
+    <details className="article-toc-mobile"><summary>On this page</summary>{toc}</details>
     <aside className="article-sidebar" aria-label="Article guide">
-      {toc}
+      <div className="sidebar-toc-panel">{toc}</div>
       <section className="sidebar-meta"><h2>Article details</h2><ul>{meta.map((item) => <li key={item}>{item}</li>)}</ul></section>
       <section className="sidebar-support"><h2>Apply the guidance</h2><p>Use the evidence to define a support boundary. Qualified firm owners retain interpretation, approval, and professional judgment.</p><Link href={relatedHref}>{relatedLabel}</Link></section>
     </aside>

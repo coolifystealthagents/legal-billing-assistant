@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import TocSync from './TocSync';
 import { ArticleSidebar, type TocItem } from './ArticleSidebar';
 import { DocketArtwork } from './DocketArtwork';
 import { site } from '@/lib/site';
 
 type Section = { heading: string; paragraphs: readonly string[] };
 type Source = { label: string; url: string };
-type Related = { title: string; href: string; summary: string };
+type Related = { title: string; href: string; summary: string; thumbnail?: string };
 
 const id = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
@@ -21,7 +20,7 @@ export function ArticleShell({ kind, title, summary, category, date, readTime, t
   const formattedDate = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
   const meta = [category, `Published ${formattedDate}`, readTime || `${kind} brief`, `Publisher: ${site.name}`];
 
-  return <main id="main-content" tabIndex={-1} className="article-page"><TocSync />
+  return <main id="main-content" tabIndex={-1} className="article-page">
     <header className="article-hero">
       <div className="article-heading"><p className="kicker"><Link href="/">Home</Link> / <Link href={`/${kind.toLowerCase()}`}>{kind}</Link> / {category}</p><h1>{title}</h1><p className="dek">{summary}</p><p className="meta">{site.name} Editorial Team · Published <time dateTime={date}>{formattedDate}</time>{readTime ? ` · ${readTime}` : ''}</p></div>
       {thumbnail ? <figure className="article-hero-image"><Image src={thumbnail} alt={`Editorial illustration for ${title}`} fill priority sizes="(max-width: 900px) 100vw, 46vw" /></figure> : <DocketArtwork title={title} detail={`${category} evidence, control, and accountable decision path`} variant="editorial" className="article-generated-art" />}
@@ -35,6 +34,6 @@ export function ArticleShell({ kind, title, summary, category, date, readTime, t
         <section id="next-step" className="article-next"><h2>Put the guidance to work</h2><p>Choose one recurring billing workflow, identify its authoritative source records, and name the owner who reviews exceptions. We can help turn that boundary into a focused support role.</p><Link className="button primary" href="/contact-us">Discuss your workflow</Link></section>
       </article>
     </section>
-    {related.length > 0 && <section className="related-reading"><div><p className="kicker">Related reading</p><h2>Continue the operating system.</h2></div><div className="related-list">{related.map((item) => <Link href={item.href} key={item.href}><h3>{item.title}</h3><p>{item.summary}</p><span>Read next</span></Link>)}</div></section>}
+    {related.length > 0 && <section className="related-reading"><div><p className="kicker">Related reading</p><h2>Continue the operating system.</h2></div><div className="related-list">{related.map((item) => <Link href={item.href} key={item.href}>{item.thumbnail && <figure><Image src={item.thumbnail} alt={`Editorial illustration for ${item.title}`} width={800} height={450} sizes="(max-width: 820px) 100vw, 33vw" /></figure>}<div><h3>{item.title}</h3><p>{item.summary}</p><span>Read next</span></div></Link>)}</div></section>}
   </main>;
 }

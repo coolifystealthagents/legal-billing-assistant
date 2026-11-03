@@ -67,7 +67,7 @@ export function Footer() {
     </div>
     <nav className="footer-primary" aria-label="Footer primary navigation">{primaryNav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</nav>
     <nav className="footer-secondary" aria-label="Resources and legal"><Link href="/about">About</Link><Link href="/blog">Blog</Link><Link href="/research">Research</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
-    <div className="footer-parent"><Image src="/brand/stealth-agents-logo-black.png" alt="StealthAgents" width={150} height={36} /><p><strong>Powered by StealthAgents</strong></p></div>
+    <div className="footer-parent"><Image src="/brand/stealth-agents-logo-black.png" alt="StealthAgents" width={149} height={50} /><p><strong>Powered by StealthAgents</strong></p></div>
     <p className="copyright">© {new Date().getFullYear()} {site.name}. Administrative support does not replace legal, billing, finance, or client authority.</p>
   </footer>;
 }
