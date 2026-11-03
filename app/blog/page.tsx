@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: 'Legal billing blog', description: 'P
 const posts = [
   ...october13Blog.map((post) => ({ ...post, summary: post.description })),
   ...october12Blog.map((post) => ({ ...post, summary: post.focus, readTime: '7 min read' })),
-  ...blogPosts.map((post) => ({ ...post, summary: post.description, thumbnail: '' })),
+  ...blogPosts.map((post) => ({ ...post, summary: post.description })),
 ];
 
 export default function BlogPage() {
