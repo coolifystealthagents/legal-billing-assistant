@@ -14,7 +14,7 @@ export function ArticleShell({ kind, title, summary, category, date, readTime, t
   kind: 'Blog' | 'Research'; title: string; summary: string; category: string; date: string; readTime?: string;
   thumbnail?: string; sections: readonly Section[]; sources?: readonly Source[]; related?: Related[]; notice?: string;
 }) {
-  const heroImage = thumbnail && thumbnail.includes('/thumbnails/') ? thumbnail.replace('/thumbnails/', '/heroes/') : thumbnail;
+  const heroImage = thumbnail && thumbnail.includes('/thumbnails/') ? thumbnail.replace('/thumbnails/', '/heroes/').replace(/\.webp$/, '-hero.webp') : thumbnail;
   const items: TocItem[] = sections.map((section) => ({ id: id(section.heading), label: section.heading }));
   if (sources.length) items.push({ id: 'authoritative-sources', label: 'Authoritative sources' });
   items.push({ id: 'next-step', label: 'Put the guidance to work' });
