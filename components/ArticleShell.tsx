@@ -14,6 +14,7 @@ export function ArticleShell({ kind, title, summary, category, date, readTime, t
   kind: 'Blog' | 'Research'; title: string; summary: string; category: string; date: string; readTime?: string;
   thumbnail?: string; sections: readonly Section[]; sources?: readonly Source[]; related?: Related[]; notice?: string;
 }) {
+  const heroImage = thumbnail && thumbnail.includes('/thumbnails/') ? thumbnail.replace('/thumbnails/', '/heroes/') : thumbnail;
   const items: TocItem[] = sections.map((section) => ({ id: id(section.heading), label: section.heading }));
   if (sources.length) items.push({ id: 'authoritative-sources', label: 'Authoritative sources' });
   items.push({ id: 'next-step', label: 'Put the guidance to work' });
@@ -23,7 +24,7 @@ export function ArticleShell({ kind, title, summary, category, date, readTime, t
   return <main id="main-content" tabIndex={-1} className="article-page">
     <header className="article-hero">
       <div className="article-heading"><p className="kicker"><Link href="/">Home</Link> / <Link href={`/${kind.toLowerCase()}`}>{kind}</Link> / {category}</p><h1>{title}</h1><p className="dek">{summary}</p><p className="meta">{site.name} Editorial Team · Published <time dateTime={date}>{formattedDate}</time>{readTime ? ` · ${readTime}` : ''}</p></div>
-      {thumbnail ? <figure className="article-hero-image"><Image src={thumbnail} alt={`Editorial illustration for ${title}`} fill priority sizes="(max-width: 900px) 100vw, 46vw" /></figure> : <DocketArtwork title={title} detail={`${category} evidence, control, and accountable decision path`} variant="editorial" className="article-generated-art" />}
+      {heroImage ? <figure className="article-hero-image"><Image src={heroImage} alt={`Editorial photograph for ${title}`} fill priority sizes="(max-width: 900px) 100vw, 46vw" /></figure> : <DocketArtwork title={title} detail={`${category} evidence, control, and accountable decision path`} variant="editorial" className="article-generated-art" />}
     </header>
     <section className="article-frame">
       <ArticleSidebar items={items} meta={meta} relatedHref="/services" relatedLabel="Review legal billing support roles" />
