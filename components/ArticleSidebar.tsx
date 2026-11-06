@@ -23,7 +23,8 @@ export function ArticleSidebar({ items, meta, relatedHref, relatedLabel }: { ite
   </nav>;
 
   return <>
-    <details className="article-toc-mobile"><summary>On this page</summary>{toc}</details>
+    <details className="article-toc-mobile"><summary>Table of contents</summary></details>
+    <div className="article-toc-mobile-panel">{toc}</div>
     <aside className="article-sidebar" aria-label="Article guide">
       <div className="sidebar-toc-panel">{toc}</div>
       <section className="sidebar-meta"><h2>Article details</h2><ul>{meta.map((item) => <li key={item}>{item}</li>)}</ul></section>
