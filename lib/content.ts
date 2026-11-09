@@ -1,5 +1,6 @@
 import { site } from './site';
 import type { BlogPost, ResearchPost } from './types';
+import { november09BlogPosts, november09ResearchPosts } from './november09-batch';
 import { november08BlogPosts, november08ResearchPosts } from './november08-batch';
 import { november07BlogPosts, november07ResearchPosts } from './november07-batch';
 import { november06BlogPosts, november06ResearchPosts } from './november06-batch';
@@ -19,6 +20,7 @@ import { october27BlogBatch, october27ResearchBatch } from './october27Batch';
 import { october25BlogBatch, october25ResearchBatch } from './october25Batch';
 
 export const blogPosts: BlogPost[] = [
+  ...november09BlogPosts,
   ...november08BlogPosts,
   ...november07BlogPosts,
   ...november06BlogPosts,
@@ -498,6 +500,7 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 export const researchPosts: ResearchPost[] = [
+  ...november09ResearchPosts,
   ...november08ResearchPosts,
   ...november07ResearchPosts,
   ...november06ResearchPosts,
