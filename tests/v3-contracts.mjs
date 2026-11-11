@@ -56,10 +56,15 @@ assert.ok(!read('components/ReviewRail.tsx').includes('review-copy'), 'review re
 mustContain('app/contact-us/page.tsx', [
   'StealthAgents reviews',
   'Official team, Bacolod',
-  '/brand/stealth-agents-team.webp',
+  '/brand/stealth-agents-official-bacolod-team.jpg',
+  'StealthAgents team members together beneath the Bacolod city sign',
   '/brand/stealth-agents-logo-black.png',
   '<LeadForm',
 ]);
+assert.ok(!read('app/contact-us/page.tsx').includes('/brand/stealth-agents-team.webp'), 'contact page must not retain the superseded coworking photo');
+const officialTeamPhoto = fs.readFileSync(path.join(root, 'public/brand/stealth-agents-official-bacolod-team.jpg'));
+assert.equal(officialTeamPhoto.length, 68973, 'official Bacolod team photo byte length must remain exact');
+assert.equal(crypto.createHash('sha256').update(officialTeamPhoto).digest('hex'), 'e80f0e94a80f5ddceba7fbcf723774689e47089bce7981c9f2bdb4205ea52767', 'official Bacolod team photo must retain verified first-party bytes');
 assert.ok(!read('app/contact-us/page.tsx').includes('go.oncehub.com'), 'OnceHub must not appear on contact page');
 
 mustContain('components/LeadForm.tsx', [
