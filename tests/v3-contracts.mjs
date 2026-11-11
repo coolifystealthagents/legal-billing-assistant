@@ -81,13 +81,20 @@ mustContain('app/thanks-whats-next/page.tsx', ['You are booked']);
 mustContain('app/services/[slug]/page.tsx', [
   'Who this support is for', 'Inputs the workflow needs', 'What the assistant prepares',
   'What your firm approves', 'Quality controls', 'Common starting scenarios',
-  'Frequently asked questions', 'Related legal billing services',
+  'Frequently asked questions', 'Related legal billing services', 'Working sequence',
+]);
+mustContain('app/services/page.tsx', [
+  'How the support system works', 'Complete service collection', 'Operational guidance',
+  'Approved public reference', 'Decision support', 'Service planning questions',
 ]);
 
 for (const file of ['components/ArticleShell.tsx', 'components/ArticleSidebar.tsx']) {
   assert.ok(fs.existsSync(path.join(root, file)), `${file} must exist`);
 }
 mustContain('components/ArticleSidebar.tsx', ['IntersectionObserver', 'aria-current', 'article-sidebar', 'article-toc-mobile']);
+mustContain('lib/editorial-assets.ts', ['articleHeroForThumbnail', 'dedicatedArticleHeroCollections', "'november-05'", "'november-11'"]);
+mustContain('components/ArticleShell.tsx', ['articleHeroForThumbnail(thumbnail)', 'Editorial illustration representing', 'sizes="(max-width: 900px) 100vw, 46vw"']);
+assert.ok(!read('components/ArticleShell.tsx').includes("thumbnail.replace('/thumbnails/'"), 'article shell must not blindly derive nonexistent hero paths');
 
 const bannedCommercial = /(?:className=["'`]\w*(?:number|step-marker|alpha)|>0[1-9]<|>[A-D]<)/;
 assert.ok(!bannedCommercial.test(allSource), 'decorative numeric or alphabet markers must not remain');

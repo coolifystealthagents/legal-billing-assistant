@@ -5,6 +5,23 @@ export const editorialAssets = {
   researchHero: '/editorial/research-evidence.jpg',
 } as const;
 
+const dedicatedArticleHeroCollections = new Set([
+  'november-05',
+  'november-06',
+  'november-07',
+  'november-08',
+  'november-09',
+  'november-10',
+  'november-11',
+]);
+
+export function articleHeroForThumbnail(thumbnail?: string) {
+  if (!thumbnail || !thumbnail.startsWith('/thumbnails/')) return thumbnail;
+  const collection = thumbnail.split('/')[2];
+  if (!dedicatedArticleHeroCollections.has(collection) || !thumbnail.endsWith('.webp')) return thumbnail;
+  return thumbnail.replace('/thumbnails/', '/heroes/').replace(/\.webp$/, '-hero.webp');
+}
+
 export const serviceImages: Record<string, { src: string; alt: string }> = {
   'time-entry-review-support': {
     src: '/editorial/service-time-entry.jpg',

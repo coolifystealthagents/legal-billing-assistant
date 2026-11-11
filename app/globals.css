@@ -104,3 +104,52 @@
   .service-directory h3,.service-card-grid h2{font-size:1.65rem}
   .editorial-row{gap:1rem}
 }
+
+/* 2026-11 full service, scaling, and editorial resilience review */
+main,main>*,header>*,section>*,article>*{min-width:0}
+h1,h2,h3,.dek,.meta,summary,a,li{overflow-wrap:anywhere}
+input,select,textarea{max-width:100%}
+.lead-form input:not([type="hidden"]),.lead-form select,.lead-form textarea{font-size:1rem;min-height:44px}
+.lead-form textarea{min-height:88px;resize:vertical}
+.lead-form .button{font-size:1rem;min-height:48px}
+.services-page .section-heading>p,.service-detail .section-heading>p{max-width:58ch}
+.service-system{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(2.5rem,7vw,7rem);border-bottom:1px solid var(--rule)}
+.service-system header p{max-width:58ch}
+.service-system dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.service-system dl div{padding:clamp(1.2rem,2.6vw,2rem);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.service-system dt{font-family:var(--display),Georgia,serif;font-size:clamp(1.3rem,2vw,1.8rem);font-weight:700;line-height:1.1}
+.service-system dd{margin:.7rem 0 0;color:var(--muted)}
+.service-context,.service-reference,.service-workflow{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2.5rem,8vw,8rem);padding:clamp(4.5rem,8vw,8rem) clamp(1rem,8vw,9rem)}
+.service-context>div:last-child,.service-reference>div:last-child,.service-workflow>ol{max-width:760px}
+.service-operating-guide{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2.5rem,8vw,8rem)}
+.service-operating-guide>div:first-child p{max-width:60ch}
+.operating-checklist{border-top:5px solid var(--aubergine);padding:clamp(1.4rem,3vw,2.5rem);background:#fff}
+.operating-checklist h3{font-size:clamp(1.5rem,2.5vw,2.2rem);margin-bottom:1.4rem}
+.operating-checklist ul{display:grid;gap:.85rem;padding-left:1.2rem}
+.service-reference{border-block:1px solid var(--rule);background:var(--paper-deep)}
+.service-reference h2{font-size:clamp(2rem,3.4vw,3.5rem)}
+.services-index-faq{border-top:1px solid var(--rule)}
+.boundary-note{margin-top:1.5rem;padding:1rem 1.2rem;border-left:4px solid var(--brass);background:#fff}
+.service-workflow ol{list-style:none;counter-reset:workflow;display:grid;border-top:1px solid rgba(255,255,255,.28)}
+.service-workflow li{counter-increment:workflow;position:relative;padding:1.4rem 0 1.4rem 3.5rem;border-bottom:1px solid rgba(255,255,255,.28)}
+.service-workflow li:before{content:counter(workflow);position:absolute;left:0;top:1.4rem;width:2rem;height:2rem;display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;font-weight:800}
+.service-workflow h3{font-size:clamp(1.3rem,2.2vw,1.9rem)}
+.service-workflow p{max-width:62ch;margin:.45rem 0 0}
+.article-hero h1{font-size:clamp(2.7rem,5vw,5.8rem)}
+.article-hero-image{overflow:hidden}
+.article-hero-image img{object-position:center}
+
+@media(max-width:820px){
+  .service-system,.service-context,.service-reference,.service-operating-guide,.service-workflow{grid-template-columns:1fr;gap:2rem}
+  .service-system dl{grid-template-columns:1fr}
+  .service-context,.service-reference,.service-workflow{padding-left:1rem;padding-right:1rem}
+  .article-hero h1{font-size:clamp(2.45rem,9vw,4.25rem)}
+}
+
+@media(max-width:560px){
+  body{font-size:16px}
+  .service-system dl div{padding:1.15rem}
+  .service-workflow li{padding-left:3rem}
+  .article-hero,.page-opening{padding-left:1rem;padding-right:1rem}
+  .button{max-width:100%;white-space:normal;text-align:center}
+}
