@@ -120,6 +120,11 @@ const mainTargetFiles = [
 ];
 mainTargetFiles.forEach((file) => mustContain(file, ['<main id="main-content" tabIndex={-1}']));
 mustContain('app/globals.css', ['position:sticky', ':focus-visible', '@media(prefers-reduced-motion:reduce)', 'scroll-margin-top']);
+mustContain('app/globals.css', [
+  '.home .home-hero .hero-copy h1{font-size:clamp(3rem,5.4vw,4.9rem);max-width:14ch}',
+  '.home .home-hero-image{min-height:0;width:100%;align-self:center}',
+]);
+assert.ok(!/\.home(?:-hero)?[^{}]*\{[^{}]*(?:zoom\s*:|transform\s*:\s*scale)/.test(read('app/globals.css')), 'homepage sizing must not use CSS zoom or page-level scale transforms');
 mustContain('next.config.mjs', ['Strict-Transport-Security', 'Content-Security-Policy', 'X-Content-Type-Options', 'Referrer-Policy', 'Permissions-Policy']);
 
 console.log(`V3 source contracts passed: ${provenance.records.length} unique approved reviews and protected conversion contracts verified.`);
