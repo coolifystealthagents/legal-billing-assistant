@@ -3,11 +3,13 @@ import type { BlogPost, ResearchPost } from './types';
 import { november17BlogPosts } from './november17-blog';
 import { november18BlogPosts } from './november18-blog';
 import { november20BlogPosts } from './november20-blog';
+import { november21BlogPosts } from './november21-blog';
 import { november19BlogPosts } from './november19-blog';
 import { november16BlogPosts } from './november16-blog';
 import { november17ResearchPosts } from './november17-research';
 import { november18ResearchPosts } from './november18-research';
 import { november20ResearchPosts } from './november20-research';
+import { november21ResearchPosts } from './november21-research';
 import { november19ResearchPosts } from './november19-research';
 import { november16ResearchPosts } from './november16-research';
 import { november11BlogPosts, november11ResearchPosts } from './november11-batch';
@@ -35,6 +37,7 @@ export const blogPosts: BlogPost[] = [
   ...november17BlogPosts,
   ...november18BlogPosts,
   ...november20BlogPosts,
+  ...november21BlogPosts,
   ...november19BlogPosts,
   ...november16BlogPosts,
   ...november11BlogPosts,
@@ -522,6 +525,7 @@ export const researchPosts: ResearchPost[] = [
   ...november17ResearchPosts,
   ...november18ResearchPosts,
   ...november20ResearchPosts,
+  ...november21ResearchPosts,
   ...november19ResearchPosts,
   ...november16ResearchPosts,
   ...november11ResearchPosts,
