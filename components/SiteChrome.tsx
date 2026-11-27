@@ -44,7 +44,7 @@ export function Header() {
     };
   }, [open]);
 
-  return <header className="site-header">
+  return <header data-site-header="sticky" className="site-header">
     <Link className="brand" href="/" aria-label={`${site.name} home`} onClick={() => setOpen(false)}>
       <Image src="/logo.svg" alt="" width={38} height={38} priority />
       <span>{site.name}</span>
@@ -60,14 +60,14 @@ export function Header() {
 }
 
 export function Footer() {
-  return <footer className="site-footer">
+  return <footer data-site-footer="true" className="site-footer">
     <div className="footer-brand">
       <Link className="brand inverse" href="/"><Image src="/logo.svg" alt="" width={44} height={44} /><span>{site.name}</span></Link>
       <p>Review-ready legal billing support for law firms that keep judgment and approval with accountable owners.</p>
     </div>
-    <nav className="footer-primary" aria-label="Footer primary navigation">{primaryNav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</nav>
+    <nav data-footer-menu="true" className="footer-primary" aria-label="Footer primary navigation">{primaryNav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</nav>
     <nav className="footer-secondary" aria-label="Resources and legal"><Link href="/about">About</Link><Link href="/blog">Blog</Link><Link href="/research">Research</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
     <div className="footer-parent"><Image src="/brand/stealth-agents-logo-black.png" alt="StealthAgents" width={149} height={50} /><p><strong>Powered by StealthAgents</strong></p></div>
-    <p className="copyright">© {new Date().getFullYear()} {site.name}. Administrative support does not replace legal, billing, finance, or client authority.</p>
+    <section className="site-parent-company" aria-label="Powered by StealthAgents"><a className="site-parent-logo" href="https://stealthagents.com/" aria-label="Visit StealthAgents"><img src="/stealthagents-parent-logo.png" alt="StealthAgents" width="158" height="53" loading="lazy" /></a><div><h2>Powered by StealthAgents</h2><p>StealthAgents recruits and supports the remote professionals behind our services, from matching and onboarding to ongoing team support.</p><a className="site-parent-link" href="https://stealthagents.com/">Explore StealthAgents ↗</a></div></section><p className="copyright">© {new Date().getFullYear()} {site.name}. Administrative support does not replace legal, billing, finance, or client authority.</p>
   </footer>;
 }

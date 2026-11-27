@@ -45,10 +45,10 @@ export function ReviewRail() {
   return <div
     ref={windowRef}
     className="review-window"
-    aria-label="StealthAgents client reviews. Focus or hover to pause automatic movement."
+    aria-label="StealthAgents client reviews. Focus to pause automatic movement."
     tabIndex={0}
-    onMouseEnter={() => { hovered.current = true; syncPaused(); }}
-    onMouseLeave={() => { hovered.current = false; syncPaused(); }}
+    
+    
     onFocus={() => { focused.current = true; syncPaused(); }}
     onBlur={() => { focused.current = false; syncPaused(); }}
   >
